@@ -20,22 +20,22 @@ In case of an empty array return 0. You will not be tested with invalid input (i
 */
 
 function countSmileys(arr) {
-    let count = 0
+    let count = 0;
     arr.map((e) => {
-    if (e.split('').length < 3){
-      if (e.includes(':') || e.includes(';')) {
-        if (e.includes(')') || e.includes('D')){
-          count++
-        } 
-    } 
-    } else if(e.split('').length == 3) {
-      if (e.includes(':') || e.includes(';')) {
-        if (e.split('')[1] == '-' || e.split('')[1] == '~')
-        if (e.includes(')') || e.includes('D')){
-          count++
-        } 
-    }
-    }
-      })
+        if (e.split('').length < 3) {
+            if (e.includes(':') || e.includes(';')) {
+                if (e.includes(')') || e.includes('D')) {
+                    count++;
+                }
+            }
+        } else if (e.split('').length == 3) {
+            if (e.includes(':') || e.includes(';')) {
+                if (e.split('')[1] == '-' || e.split('')[1] == '~')
+                    if (e.includes(')') || e.includes('D')) {
+                        count++;
+                    }
+            }
+        }
+    });
     return count;
-  }
+}
